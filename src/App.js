@@ -60,7 +60,7 @@ function PrefixSuffixDemo() {
             </div>
 
             <div className="w-2/4 m-5 rounded-3xl bg-white shadow-lg flex items-center justify-center">
-                <form className="p-5 w-3/4 rounded-md" onSubmit={handleSubmit}>
+                <form className="w-full flex items-center justify-center" onSubmit={handleSubmit}>
                     <div className="p-5 w-3/4 rounded-md">
 
                         <p className="font-bold text-2xl uppercase text-gray-900">Welcome to ......</p>
