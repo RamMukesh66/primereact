@@ -49,7 +49,7 @@ function NewApp() {
                         </div>
 
                         <div >
-                            <FloatLabel>
+                            <FloatLabel className='disbled_inputs'>
                                 <InputText disabled keyfilter="int"  className='figmaInputs' id="phonenumber" maxLength={10} />
                                 <label className="figmaInputsLabel" htmlFor="phonenumber">Phone number • ದೂರವಾಣಿ ಸಂಖ್ಯೆ</label>
                             </FloatLabel>
@@ -88,7 +88,7 @@ function NewApp() {
                         </div>
 
                         <div >
-                            <FloatLabel>
+                            <FloatLabel className='disbled_inputs'>
                                 <InputText disabled keyfilter="alpha"  className='figmaInputs' id="username" maxLength={10} />
                                 <label className="figmaInputsLabel" htmlFor="username">Full name • ಪೂರ್ಣ ಹೆಸರು</label>
                             </FloatLabel>
@@ -135,13 +135,13 @@ function NewApp() {
                         </div>
 
                         <div>
-                            <FloatLabel>
+                            <FloatLabel className='disbled_inputs'>
                                 <Dropdown
                                     disabled
                                     options={countries}
                                     optionLabel="name"
                                     filter
-                                    className='singleSelectFigma disbled_inputs'
+                                    className='singleSelectFigma'
                                     itemTemplate={countryOptionTemplate}
                                 />
                                 <label className="figmaInputsLabel" htmlFor="username">District • ಜಿಲ್ಲೆ</label>
@@ -150,24 +150,27 @@ function NewApp() {
                         </div>
 
                         <div>
-                            <FloatLabel>
+                            <FloatLabel className='disbled_inputs'>
                                 <Dropdown
                                     disabled
                                     optionLabel="name"
                                     filter
-                                    className='singleSelectFigma disbled_inputs'
+                                    className='singleSelectFigma'
                                 />
                                 <label className="figmaInputsLabel" htmlFor="username">District • ಜಿಲ್ಲೆ</label>
                             </FloatLabel>
                             <p></p>    
                         </div>
                         <div>
-                            <FloatLabel>
+                            <FloatLabel className='disbled_inputs'>
                                 <Dropdown
                                     disabled
+                                    value="SE"
+                                    options={countries}
                                     optionLabel="name"
+                                    optionValue="code"
                                     filter
-                                    className='singleSelectFigma disbled_inputs'
+                                    className='singleSelectFigma'
                                 />
                                 <label className="figmaInputsLabel" htmlFor="username">District • ಜಿಲ್ಲೆ</label>
                             </FloatLabel>

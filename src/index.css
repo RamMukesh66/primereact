@@ -363,8 +363,8 @@ body {
     margin-left: 4px;
 }
 
-.disbled_inputs input, .disbled_inputs label{
-    color: rgba(152, 162, 179, 1);
+.disbled_inputs input, .disbled_inputs label, .disbled_inputs .singleSelectFigma .p-dropdown-label{
+    color: rgba(152, 162, 179, 1) !important;
 }
 .disbled_inputs input{
     border: 1px solid rgba(208, 213, 221, 1)
