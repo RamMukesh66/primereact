@@ -19,7 +19,7 @@ body {
     background-color: var(--surface-card);
 }
 
-h1 {
+/* h1 {
     margin-top: 0;
 }
 
@@ -92,10 +92,10 @@ h1 {
 }
 .p-multiselect-panel .p-multiselect-items .p-multiselect-item:not(.p-highlight):not(.p-disabled).p-focus{
     background: rgba(209, 233, 255, 1) !important;
-}
+} */
 
 .error_msg_class{
-    margin-top:0;
+    margin:0;
     padding: 10px;
     background-color: rgba(254, 228, 226, 1);
     color: rgba(29, 41, 57, 1);
@@ -104,7 +104,6 @@ h1 {
     border-radius: 0 0 6px 6px;
     position: relative;
     top: -5px;
-    display: block;
 }
 
 .error_icon_field{
@@ -115,7 +114,7 @@ h1 {
     border-radius: 50%;
 }
 
-button{
+/* button{
     border-radius: 6px;
 }
 
@@ -322,4 +321,118 @@ button{
     border-radius: 6px;
     display: inline-flex;
     gap: 10px;
+} */
+
+
+/* tinyMCE */
+
+.tox-tinymce{
+    border-radius: 6px !important;
+}
+
+.tox-statusbar{
+    display: none !important;
+}
+
+.tox-toolbar__primary{
+    border-bottom: 1px solid #ccc !important;
+}
+
+
+.p-float-label:has(input:focus) label, .p-float-label:has(input.p-filled) label, .p-float-label:has(input:-webkit-autofill) label, .p-float-label:has(textarea:focus) label, .p-float-label:has(textarea.p-filled) label, .p-float-label:has(.p-inputwrapper-focus) label, .p-float-label:has(.p-inputwrapper-filled) label {
+    top: 0.8rem !important;
+}
+
+.figmaInputs{
+    width: 300px !important;
+    height: 48px !important;
+    padding: 15px 12px 0px 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+}
+
+.figmaInputsLabel{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    text-align: left;
+    margin-left: 4px;
+}
+
+.disbled_inputs input, .disbled_inputs label{
+    color: rgba(152, 162, 179, 1);
+}
+.disbled_inputs input{
+    border: 1px solid rgba(208, 213, 221, 1)
+}
+
+.singleSelectFigma{
+    width: 314px;
+    height: 48px;
+    padding: 17px 12px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(208, 213, 221, 1)
+}
+
+.singleSelectFigma .p-dropdown-label{
+    padding-left: 3px;
+}
+
+.singleSelectOptions{
+    color: rgba(29, 41, 57, 1);
+    display:flex;
+    align-items:baseline;
+    gap:5px;
+    padding:12px,
+}
+
+.p-dropdown-items{
+    padding:0;
+}
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight{
+    background-color: rgba(209, 233, 255, 1);
+}
+
+.p-dropdown-header{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.p-dropdown-filter-container .p-dropdown-filter{
+    background: rgba(242, 244, 247, 1);
+    padding-left: 30px;
+}
+
+.p-dropdown-filter-icon{
+    left: 10px;
+}
+
+.p-dropdown-items li{
+    height: 47px;
+    padding: 12px;
+}
+
+.singleSelectFigma .p-dropdown-label{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    color: rgba(29, 41, 57, 1);
+}
+
+.p-dropdown-trigger-icon{
+    position: absolute;
+    top: 35%;
+}
+
+.p-focus{
+    outline: none;
+}
+
+.p-dropdown-header{
+    padding: 12px;
 }

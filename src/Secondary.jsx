@@ -1,7 +1,6 @@
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { InputTextarea } from "primereact/inputtextarea";
-import { Editor } from "primereact/editor";
 import { Button } from 'primereact/button';
 import { FileUpload } from 'primereact/fileupload';
 
@@ -19,6 +18,25 @@ function SecondComponent() {
     const removeFile = (indexToRemove) => {
         setUploadedFiles(uploadedFiles.filter((_, index) => index !== indexToRemove));
     };
+
+    useEffect(() => {
+        tinymce.init({
+            selector: '#myEditor',
+            plugins: 'lists link image code',
+            toolbar: 'undo redo | formatselect | forecolor | bold italic underline strikethrough | alignleft aligncenter alignright | bullist numlist | link image code blockquote',
+            height: 320,
+            setup: editor => {
+                editor.on('change', () => {
+                    setRichTextEditor(editor.getContent());
+                });
+            },
+            menubar: false
+        });
+    
+        return () => {
+            tinymce.remove();
+        };
+    }, []); 
 
     const getFileIconAndColor = (fileName) => {
         const extension = fileName.split('.').pop().toLowerCase();
@@ -50,20 +68,16 @@ function SecondComponent() {
                         fontSize:'16px',
                         fontWeight:'400',
                         color:'rgba(29, 41, 57, 1)',
-                        marginBottom:'3px'
+                        marginBottom:'6px'
                     }} 
                     
                     htmlFor="">
                     Long Text
                 </label>
-                <InputTextarea className="border-radius-6" variant="filled" value={textAreaValue} onChange={(e) => setTextAreaValue(e.target.value)} rows={5} cols={77} />
+                <InputTextarea className="border-radius-6" value={textAreaValue} onChange={(e) => setTextAreaValue(e.target.value)} rows={5} cols={77} />
             </div>
-            <div style={{
-                display:'flex',
-                flexDirection:'column',
-                marginTop:'30px'
-            }}>
-                <Editor className='border-radius-6' value={richTextEditor} onTextChange={(e) => setRichTextEditor(e.htmlValue)} style={{ height: '320px' }} />
+            <div style={{ display: 'flex', flexDirection: 'column', marginTop: '30px' }}>
+                <textarea id="myEditor"></textarea>
             </div>
 
             <div style={{ width: '300px', margin: '20px auto' }}>

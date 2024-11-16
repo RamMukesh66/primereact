@@ -5,6 +5,7 @@ import SecondComponent from './Secondary';
 import FormValidation from './FormValidations';
 import TableComponent from './Table';
 import Steppers from './Stepper';
+import Newapp from './Newcomponents';
 
 import 'primereact/resources/themes/lara-light-blue/theme.css'
 import 'primereact/resources/primereact.min.css';
@@ -19,6 +20,9 @@ function App() {
             <Route path="/formvalidation" element={<FormValidation />} />
             <Route path="/table" element={<TableComponent />} />
             <Route path="/stepper" element={<Steppers />} />
+
+            {/* new components */}
+            <Route path="/new" element={<Newapp />} />
         </Routes>
     </BrowserRouter>
   );
