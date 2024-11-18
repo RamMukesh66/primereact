@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     font-family: "Roboto", sans-serif;
 }
 
+.anekFont{
+    font-family: "Anek Kannada", "Roboto";
+}
 :root {
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -103,7 +107,7 @@ body {
     border-top: 2px solid rgba(240, 68, 56, 1);
     border-radius: 0 0 6px 6px;
     position: relative;
-    top: -5px;
+    top: -4px;
 }
 
 .error_icon_field{
@@ -280,6 +284,7 @@ body {
     margin: 0;
     color: rgba(21, 112, 239, 1);
     font-size: 12px;
+    font-weight: 500;
     background: rgba(239, 248, 255, 1);
     padding: 4px;
     margin-top: 3px;
@@ -294,6 +299,7 @@ body {
     padding: 4px;
     margin-top: 3px;
     border-radius: 12px;
+    font-weight: 500;
 }
 
 .p-tabview-selected a {
@@ -355,6 +361,53 @@ body {
     text-align: left;
 }
 
+.figmaInputs:focus{
+    border: 2px solid rgba(21, 112, 239, 1);
+    box-shadow: 0px 0px 0px 5px rgba(220, 235, 255, 1);
+}
+
+.figmaIconWithinputs{
+    width: 292px !important;
+    height: 48px !important;
+    padding: 15px 12px 0px 15px;
+    border: 1px solid rgba(208, 213, 221, 1);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+}
+.figmaInputIcons .p-inputgroup-addon{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    min-width: 31px;
+    height: 48px;
+    color: rgba(52, 64, 84, 1);
+    font-weight: 500;
+    background: rgba(249, 250, 251, 1) !important;
+}
+
+.figmaInputIcons:focus-within .figmaIconWithinputs {
+    border: 2px solid rgba(21, 112, 239, 1);
+    border-left: 0;
+    box-shadow: 0px -5px 5px rgba(220, 235, 255, 1),
+                5px 5px 5px rgba(220, 235, 255, 1);
+}
+
+.figmaInputIcons:focus-within .p-inputgroup-addon {
+    border: 2px solid rgba(21, 112, 239, 1);
+    box-shadow: -5px 0px 5px rgba(220, 235, 255, 1),
+                0px -5px 5px rgba(220, 235, 255, 1),
+                0px 5px 5px rgba(220, 235, 255, 1);
+
+}
+
+.disbledFigmaIcons{
+    border-top: 1px solid rgba(208, 213, 221, 0.5) !important;
+    border-bottom: 1px solid rgba(208, 213, 221, 0.5) !important;
+    border-left: 1px solid rgba(208, 213, 221, 0.5) !important;
+    color: rgba(152, 162, 179, 1) !important;
+}
 .figmaInputsLabel{
     font-size: 14px;
     font-weight: 400;
@@ -378,6 +431,12 @@ body {
     align-items: center;
     gap: 10px;
     border: 1px solid rgba(208, 213, 221, 1)
+}
+
+.singleSelectFigma:focus-within{
+    border: 2px solid rgba(21, 112, 239, 1);
+    box-shadow: 0px -5px 5px rgba(220, 235, 255, 1),
+                5px 5px 5px rgba(220, 235, 255, 1);
 }
 
 .singleSelectFigma .p-dropdown-label{
@@ -435,4 +494,193 @@ body {
 
 .p-dropdown-header{
     padding: 12px;
+}
+
+.inputSupportingText{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    color: rgba(152, 162, 179, 1);
+    margin: 4px 0px;
+}
+.inputChangeUrlText{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    color: rgba(21, 112, 239, 1);
+    margin: 4px 0px;
+}
+.disbledExtraText{
+    color:rgba(152, 162, 179, 1) !important;
+}
+
+.custom-multiselect{
+    height: 48px !important;
+    width: 314px !important;
+}
+.custom-multiselect .p-multiselect-label-container{
+    padding: 12px 17px;
+}
+
+.custom-multiselect .p-multiselect-label-container .p-multiselect-label{
+    display: none;
+}
+
+.noChipInputs .p-chips-multiple-container{
+    border:none !important;
+    outline: none;
+    box-shadow: none;
+    padding: 5px 0px;
+    display: flex;
+    gap: 5px;
+    width: 314px;
+    flex-wrap: wrap;
+}
+.noChipInputs .p-chips-input-token{
+    display: none;
+}
+.noChipInputs .p-chips-multiple-container .p-chips-token{
+    background: rgba(208, 213, 221, 1);
+    color: rgba(71, 84, 103, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    border-radius: 6px;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight{
+    background: #fff;
+    color: rgba(52, 64, 84, 1) !important;
+}
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight:hover{
+    background: rgba(209, 233, 255, 1) !important;
+}
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item:not(.p-highlight):not(.p-disabled).p-focus{
+    background: rgba(209, 233, 255, 1) !important;
+}
+.p-multiselect-select-all{
+    display: none;
+}
+
+.multiSelectLabel{
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    margin-top: -0.5rem;
+    transition-property: all;
+    transition-timing-function: ease;
+    line-height: 1;
+    left: 15px;
+    color:rgba(102, 112, 133, 1);
+}
+
+.disabledMultiSelect{
+    color: rgba(152, 162, 179, 1);
+}
+
+.figmaInputs input{
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    box-shadow: none;
+}
+
+.textareaLabel{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    margin-bottom: 10px;
+}
+
+.primaryBtn{
+    width: 250px;
+    height: 48px;
+    padding: 16px 24px 16px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    background-color: rgba(21, 112, 239, 1);
+    color: #fff;
+    border: none;
+}
+
+.primaryBtn:hover{
+    background-color: rgba(23, 92, 211, 1);
+}
+
+.primaryDisabledBtn{
+    background-color: rgba(208, 213, 221, 1) !important;
+    color: rgba(152, 162, 179, 1) !important;
+    cursor: not-allowed;
+}
+
+.secondaryBtn{
+    width: 250px;
+    height: 48px;
+    padding: 16px 24px 16px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    background-color: rgba(252, 252, 253, 1);
+    color: rgba(29, 41, 57, 1);
+    border: 1px solid rgba(208, 213, 221, 1);
+}
+
+.secondaryBtn:hover{
+    background-color: rgba(242, 244, 247, 1);
+    border: 1px solid rgba(208, 213, 221, 1)
+}
+
+.secondaryDisabledBtn{
+    background-color: rgba(249, 250, 251, 1) !important;
+    color: rgba(152, 162, 179, 1) !important;
+    cursor: not-allowed;
+}
+
+.urlBtn{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    color: rgba(21, 112, 239, 1);
+    border:none;
+    background-color: transparent;
+}
+
+.urlBtn:hover{
+    color:rgba(23, 92, 211, 1);
+}
+
+.urlDisabledBtn{
+    color: rgba(152, 162, 179, 1) !important;
+    cursor: not-allowed;
+}
+
+.greenBtn{
+    width: 133px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 38px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.75px;
+    background-color: rgba(50, 213, 131, 1);
+    color: rgba(29, 41, 57, 1);
+    border:none;
+}
+
+.greenBtn:hover{
+    background-color:rgba(18, 183, 106, 1);
+}
+
+.greenDisabledBtn{
+    background-color: rgba(208, 213, 221, 1) !important;
+    color: rgba(152, 162, 179, 1) !important;
+    cursor: not-allowed;
 }
