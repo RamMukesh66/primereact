@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto";
 }
 
 .anekFont{
-    font-family: "Anek Kannada", "Roboto";
+    font-family: "Anek Kannada";
 }
 :root {
     font-synthesis: none;
@@ -17,7 +17,6 @@
 
 body {
     margin: 0;
-    padding: 2rem;
     min-width: 320px;
     min-height: 100vh;
     background-color: var(--surface-card);
@@ -101,17 +100,17 @@ body {
 .error_msg_class{
     margin:0;
     padding: 10px;
-    background-color: rgba(254, 228, 226, 1);
-    color: rgba(29, 41, 57, 1);
+    background-color: #FEE4E2;
+    color: #1D2939;
     font-size: 14px;
-    border-top: 2px solid rgba(240, 68, 56, 1);
+    border-top: 1.5px solid #F04438;
     border-radius: 0 0 6px 6px;
     position: relative;
     top: -4px;
 }
 
 .error_icon_field{
-    background-color: rgba(240, 68, 56, 1);
+    background-color: #F04438;
     color: #fff;
     padding: 3px;
     font-size: 8px;
@@ -124,7 +123,7 @@ body {
 
 .border-radius-6{
     border-radius: 6px;
-    border: 1px solid rgba(208, 213, 221, 1);
+    border: 1px solid #D0D5DD;
 }
 .ql-container.ql-snow{
     border-radius: 0 0 6px 6px;
@@ -352,9 +351,9 @@ body {
 .figmaInputs{
     width: 300px !important;
     height: 48px !important;
-    padding: 15px 12px 0px 15px;
+    padding: 15px 12px 0px 12px;
     border-radius: 6px;
-    border: 1px solid rgba(208, 213, 221, 1);
+    border: 1px solid #D0D5DD;
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
@@ -362,15 +361,15 @@ body {
 }
 
 .figmaInputs:focus{
-    border: 2px solid rgba(21, 112, 239, 1);
-    box-shadow: 0px 0px 0px 5px rgba(220, 235, 255, 1);
+    border: 1.5px solid #1570EF;
+    box-shadow: 0px 0px 0px 5px #D1E9FF;
 }
 
 .figmaIconWithinputs{
     width: 292px !important;
     height: 48px !important;
-    padding: 15px 12px 0px 15px;
-    border: 1px solid rgba(208, 213, 221, 1);
+    padding: 15px 12px 0px 12px;
+    border: 1px solid #D0D5DD;
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
@@ -382,45 +381,45 @@ body {
     padding: 15px 10px;
     min-width: 31px;
     height: 48px;
-    color: rgba(52, 64, 84, 1);
+    color: #344054;
     font-weight: 500;
-    background: rgba(249, 250, 251, 1) !important;
+    background: #F9FAFB !important;
 }
 
 .figmaInputIcons:focus-within .figmaIconWithinputs {
-    border: 2px solid rgba(21, 112, 239, 1);
+    border: 1.5px solid #1570EF;
     border-left: 0;
-    box-shadow: 0px -5px 5px rgba(220, 235, 255, 1),
-                5px 5px 5px rgba(220, 235, 255, 1);
+    box-shadow: 0px -5px 5px #D1E9FF,
+                5px 5px 5px #D1E9FF;
 }
 
 .figmaInputIcons:focus-within .p-inputgroup-addon {
-    border: 2px solid rgba(21, 112, 239, 1);
-    box-shadow: -5px 0px 5px rgba(220, 235, 255, 1),
-                0px -5px 5px rgba(220, 235, 255, 1),
-                0px 5px 5px rgba(220, 235, 255, 1);
+    border: 1.5px solid #1570EF;
+    box-shadow: -5px 0px 5px #D1E9FF,
+                0px -5px 5px #D1E9FF,
+                0px 5px 5px #D1E9FF;
 
 }
 
 .disbledFigmaIcons{
-    border-top: 1px solid rgba(208, 213, 221, 0.5) !important;
-    border-bottom: 1px solid rgba(208, 213, 221, 0.5) !important;
-    border-left: 1px solid rgba(208, 213, 221, 0.5) !important;
-    color: rgba(152, 162, 179, 1) !important;
+    border-top: 1px solid #D0D5DD !important;
+    border-bottom: 1px solid #D0D5DD !important;
+    border-left: 1px solid #D0D5DD !important;
+    color: #98A2B3 !important;
 }
 .figmaInputsLabel{
     font-size: 14px;
     font-weight: 400;
     line-height: 16.41px;
     text-align: left;
-    margin-left: 4px;
+    color: #667085;
 }
 
 .disbled_inputs input, .disbled_inputs label, .disbled_inputs .singleSelectFigma .p-dropdown-label{
-    color: rgba(152, 162, 179, 1) !important;
+    color: #98A2B3 !important;
 }
 .disbled_inputs input{
-    border: 1px solid rgba(208, 213, 221, 1)
+    border: 1px solid #D0D5DD;
 }
 
 .singleSelectFigma{
@@ -430,21 +429,21 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 1px solid rgba(208, 213, 221, 1)
+    border: 1px solid #D0D5DD;
 }
 
 .singleSelectFigma:focus-within{
-    border: 2px solid rgba(21, 112, 239, 1);
-    box-shadow: 0px -5px 5px rgba(220, 235, 255, 1),
-                5px 5px 5px rgba(220, 235, 255, 1);
+    border: 1.5px solid #1570EF;
+    box-shadow: 0px -5px 5px #D1E9FF,
+                5px 5px 5px #D1E9FF;
 }
 
 .singleSelectFigma .p-dropdown-label{
-    padding-left: 3px;
+    padding-left: 0;
 }
 
 .singleSelectOptions{
-    color: rgba(29, 41, 57, 1);
+    color: #344054;
     display:flex;
     align-items:baseline;
     gap:5px;
@@ -455,15 +454,15 @@ body {
     padding:0;
 }
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight{
-    background-color: rgba(209, 233, 255, 1);
+    background-color: #D1E9FF;
 }
 
 .p-dropdown-header{
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #FFFFFF;
 }
 
 .p-dropdown-filter-container .p-dropdown-filter{
-    background: rgba(242, 244, 247, 1);
+    background: #F2F4F7;
     padding-left: 30px;
 }
 
@@ -500,18 +499,18 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 16.41px;
-    color: rgba(152, 162, 179, 1);
-    margin: 4px 0px;
+    color: #98A2B3;
+    margin: 8px 0px;
 }
 .inputChangeUrlText{
     font-size: 14px;
     font-weight: 400;
     line-height: 16.41px;
-    color: rgba(21, 112, 239, 1);
-    margin: 4px 0px;
+    color: #1570EF;
+    margin: 8px 0px;
 }
 .disbledExtraText{
-    color:rgba(152, 162, 179, 1) !important;
+    color: #98A2B3 !important;
 }
 
 .custom-multiselect{
@@ -540,8 +539,8 @@ body {
     display: none;
 }
 .noChipInputs .p-chips-multiple-container .p-chips-token{
-    background: rgba(208, 213, 221, 1);
-    color: rgba(71, 84, 103, 1);
+    background: #D0D5DD;
+    color: #101828;
     font-size: 14px;
     font-weight: 400;
     line-height: 16.41px;
@@ -612,7 +611,7 @@ body {
 }
 
 .primaryDisabledBtn{
-    background-color: rgba(208, 213, 221, 1) !important;
+    background-color: #D0D5DD !important;
     color: rgba(152, 162, 179, 1) !important;
     cursor: not-allowed;
 }
@@ -625,37 +624,44 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
-    background-color: rgba(252, 252, 253, 1);
+    background-color: #FCFCFD;
     color: rgba(29, 41, 57, 1);
-    border: 1px solid rgba(208, 213, 221, 1);
+    border: 1px solid #D0D5DD;
 }
 
 .secondaryBtn:hover{
-    background-color: rgba(242, 244, 247, 1);
-    border: 1px solid rgba(208, 213, 221, 1)
+    background-color: #F2F4F7;
+    border: 1px solid #D0D5DD
 }
 
 .secondaryDisabledBtn{
-    background-color: rgba(249, 250, 251, 1) !important;
-    color: rgba(152, 162, 179, 1) !important;
+    background-color: #F9FAFB !important;
+    color: #98A2B3 !important;
     cursor: not-allowed;
+    border: 1px solid #EAECF0;
+}
+.secondaryDisabledBtn:hover {
+    background-color: #F9FAFB !important;
+    color: #98A2B3 !important;
+    cursor: not-allowed;
+    border: 1px solid #EAECF0;
 }
 
 .urlBtn{
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
-    color: rgba(21, 112, 239, 1);
+    color: #1570EF;
     border:none;
     background-color: transparent;
 }
 
 .urlBtn:hover{
-    color:rgba(23, 92, 211, 1);
+    color:#175CD3;
 }
 
 .urlDisabledBtn{
-    color: rgba(152, 162, 179, 1) !important;
+    color: #98A2B3 !important;
     cursor: not-allowed;
 }
 
@@ -670,17 +676,72 @@ body {
     font-size: 14px;
     font-weight: 500;
     line-height: 18.75px;
-    background-color: rgba(50, 213, 131, 1);
-    color: rgba(29, 41, 57, 1);
+    background-color: #32D583;
+    color: #1D2939;
     border:none;
 }
 
 .greenBtn:hover{
-    background-color:rgba(18, 183, 106, 1);
+    background-color:#12B76A;
 }
 
 .greenDisabledBtn{
-    background-color: rgba(208, 213, 221, 1) !important;
-    color: rgba(152, 162, 179, 1) !important;
+    background-color: #D0D5DD !important;
+    color: #98A2B3 !important;
     cursor: not-allowed;
+}
+
+
+/* navbar */
+
+.navbarHeader{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 12px 17px;
+    height: 70px;
+    border-bottom:1px solid #D0D5DD;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 99;
+}
+
+.logoText{
+    margin: 0;
+    font-size: 26.4px;
+    font-weight: 600;
+    line-height: 29.94px;
+    color: rgba(16, 24, 40, 1);
+}
+
+.navbarSearchInput{
+    width: 616px !important;
+    background-color: rgba(242, 244, 247, 1);
+    border-radius: 8px;
+    border: none;
+    padding-left: 40px;
+}
+.navbarSearchInput:focus{
+    border: 1.5px solid rgba(21, 112, 239, 1);
+}
+
+.userLogo{
+    width: 44px;
+    height: 44px;
+    border:1.05px solid #D0D5DD;
+    border-radius: 50%;
+}
+
+.userName{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 14px;
+    color: rgba(29, 41, 57, 1);
+}
+.userDesignation{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgba(152, 162, 179, 1);
 }

@@ -545,15 +545,15 @@ function NewApp() {
                         </div>
                         <div style={{display:'inline-flex',gap:'10px',flexDirection:'column',marginTop:'30px'}}>
                             <button className='secondaryBtn'>Secondary button</button>
-                            <button className='secondaryBtn secondaryDisabledBtn'>Secondary button</button>
+                            <button disabled className='secondaryBtn secondaryDisabledBtn'>Secondary button</button>
                         </div>
                         <div style={{display:'inline-flex',gap:'30px',flexDirection:'column',marginTop:'30px'}}>
                             <button className='urlBtn'>Tertiary  or URL button</button>
-                            <button className='urlBtn urlDisabledBtn'>Tertiary  or URL button</button>
+                            <button disabled className='urlBtn urlDisabledBtn'>Tertiary  or URL button</button>
                         </div>
                         <div style={{display:'inline-flex',gap:'10px',flexDirection:'column',marginTop:'30px'}}>
                             <button className='greenBtn'><i className='pi pi-save'></i>Save message</button>
-                            <button className='greenBtn greenDisabledBtn'><i className='pi pi-save'></i>Save message</button>
+                            <button disabled className='greenBtn greenDisabledBtn'><i className='pi pi-save'></i>Save message</button>
                         </div>
                     </div>
 
