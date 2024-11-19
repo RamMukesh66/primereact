@@ -32,7 +32,7 @@ export default function Navbar() {
 
                 {/* navbar end user details */}
                 <div style={{height:'100%',display:'inline-flex',alignItems:'center'}}>
-                    <i className='pi pi-question-circle' style={{width:'20px',height:'20px',color:'rgba(29, 41, 57, 1)',marginRight:'10px'}}></i>
+                    <i className='pi pi-question-circle' style={{width:'20px',height:'20px',color:'rgba(29, 41, 57, 1)',marginRight:'10px',fontSize:'20px'}}></i>
                     <div style={{display:'flex',alignItems:'center',paddingLeft:'10px',paddingRight:'10px',borderRight:'1.2px solid rgba(208, 213, 221, 1)',borderLeft:'1.2px solid rgba(208, 213, 221, 1)'}}>
                         <img src="./user.svg" className='userLogo' />
                         <div style={{display:'flex',flexDirection:'column',paddingLeft:'8px',paddingRight:'8px',gap:'5px'}}>
@@ -40,7 +40,7 @@ export default function Navbar() {
                             <label className='userDesignation'>ASP</label>
                         </div>
                     </div>
-                    <i className='pi pi-sign-out' style={{marginLeft:'10px',color:'rgba(152, 162, 179, 1)',width:'18px',height:'18px'}}></i>
+                    <i className='pi pi-sign-out' style={{marginLeft:'16px',color:'rgba(152, 162, 179, 1)',width:'18px',height:'18px',fontSize:'18px'}}></i>
                 </div>
 
             </div>
