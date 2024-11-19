@@ -745,3 +745,11 @@ body {
     line-height: 14px;
     color: rgba(152, 162, 179, 1);
 }
+
+
+
+/* modal box */
+
+.no-header .p-dialog-header{
+    display: none;
+}

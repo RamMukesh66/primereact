@@ -16,7 +16,7 @@ function App() {
   return (
     <BrowserRouter>
         <Navbar />
-        <div style={{marginTop:'5rem',padding:'2rem'}}>
+        <div style={{marginTop:'2rem',padding:'2rem'}}>
             <Routes>
                 <Route path="/home" element={<Home />} />
                 <Route path="/secondary" element={<SecondComponent />} />
