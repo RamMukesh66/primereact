@@ -220,10 +220,10 @@ body {
 }
 
 /* Add these styles to give different colors to grading labels */
-.grading-g1 { background-color: #f44336; color: white; padding: 4px 8px; border-radius: 4px; }
-.grading-g2 { background-color: #ff9800; color: white; padding: 4px 8px; border-radius: 4px; }
-.grading-g3 { background-color: #ffc107; color: white; padding: 4px 8px; border-radius: 4px; }
-.grading-g4 { background-color: #4caf50; color: white; padding: 4px 8px; border-radius: 4px; }
+.grading-g1 { width: 34px; height: 30px; padding: 8px; border-radius: 6px; background-color: #F04438; color: #FFFFFF; font-size: 14px; line-height: 14px; font-weight: 500; display: block;}
+.grading-g2 { width: 34px; height: 30px; padding: 8px; border-radius: 6px; background-color: #FB6514; color: #FFFFFF; font-size: 14px; line-height: 14px; font-weight: 500; display: block;}
+.grading-g3 { width: 34px; height: 30px; padding: 8px; border-radius: 6px; background-color: #FDB022; color: #FFFFFF; font-size: 14px; line-height: 14px; font-weight: 500; display: block;}
+.grading-g4 { width: 34px; height: 30px; padding: 8px; border-radius: 6px; background-color: #12B76A; color: #FFFFFF; font-size: 14px; line-height: 14px; font-weight: 500; display: block;}
 
 .p-datatable-thead tr th{
     background-color: rgba(234, 236, 240, 1);
@@ -235,6 +235,50 @@ body {
     border-radius: 0 6px 6px 0;
 }
 
+.p-column-title{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    color: #1D2939;
+}
+
+.p-sortable-column .p-column-header-content{
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+}
+
+.p-column-header-content{
+    justify-content: end;
+}
+
+.p-column-header-content .p-sortable-column-icon{
+    width: 12px;
+    height: 10.67px;
+    color: #475467;
+}
+
+.p-selection-column .p-checkbox .p-checkbox-box{
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #D0D5DD;
+    border-radius: 2.88px;
+    padding: 2px;
+}
+
+.p-selection-column .p-checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-datatable .p-datatable-thead > tr > th, .p-datatable .p-datatable-tbody > tr > td{
+    padding: 0.5rem 0.5rem;
+}
+
+.p-datatable-header{
+    border: none;
+}
 
 /* stepper component css */
 .p-stepper .p-stepper-header.p-highlight .p-stepper-number {
@@ -842,4 +886,77 @@ body {
 ::-webkit-scrollbar-thumb {
     background: #EAECF0;
     border-radius: 10px;
+}
+
+
+/* table pagination */
+
+.p-paginator-pages{
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+}
+
+.p-paginator-pages .p-paginator-element {
+    border-right: 1px solid #D0D5DD;
+    border-radius:0;
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #1D2939;
+    font-weight: 500;
+    background: #FFFFFF;
+}
+
+.p-paginator-pages .p-paginator-element:last-child{
+    border-radius: 0 6px 6px 0;
+    border: none;
+}
+.p-paginator-pages .p-paginator-element:first-child{
+    border-radius: 6px 0 0 6px;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight{
+    background-color: #F2F4F7 !important;
+}
+
+.p-paginator-first, .p-paginator-last, .p-paginator-prev, .p-paginator-next{
+    display: none;
+}
+
+.smallbtn{
+    width: 70px;
+    height: 34px;
+    padding: 8px;
+    border:1px solid #D0D5DD;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #1D2939;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4px;
+}
+
+.smallbtn i{
+    font-size: 12px;
+}
+
+.p-paginator-bottom{
+    position: relative;
+}
+
+.absoluteLeft{
+    position: absolute;
+    top: 25%;
+    left: 0;
+}
+
+.absoluteRight{
+    position: absolute;
+    top: 25%;
+    right: 0;
 }
