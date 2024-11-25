@@ -9,6 +9,7 @@ import Newapp from './Newcomponents';
 import Navbar from './Navbar';
 import Lokayukasidebar from './Lokayukasidebar';
 import Formbuilder from './Formbuilder';
+import MainPage from './Mainformbuilder';
 import Sidebar from './Sidebar';
 
 import 'primereact/resources/themes/lara-light-blue/theme.css'
@@ -20,10 +21,10 @@ function App() {
     <BrowserRouter>
         <Lokayukasidebar />
         {/* <Sidebar /> */}
-        <div style={{marginTop:'2rem',padding:'2rem'}}>
+        <div>
             <div className='mainPanelDiv'>
                 <Routes>
-                    <Route path="/" element={<Formbuilder />} />
+                    <Route path="/" element={<MainPage />} />
                     {/* <Route path="/home" element={<Home />} />
                     <Route path="/secondary" element={<SecondComponent />} />
                     <Route path="/formvalidation" element={<FormValidation />} />

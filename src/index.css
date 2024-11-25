@@ -1087,3 +1087,24 @@ body {
     width: 8px;
     height: 8px;
 }
+
+.d-flex{
+    display: flex;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+
+.p-splitter-gutter{
+    position: relative;
+    top: 30px;
+    height: 0 !important;
+}
