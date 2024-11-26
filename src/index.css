@@ -361,9 +361,14 @@ body {
     color: rgba(102, 112, 133, 1);
     padding: 8px 10px;
     width: 130px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.formBuilderNavTabs a {
+    width: 40px !important;
+    height: 100%;
 }
 
 .p-tabview .p-tabview-nav{
@@ -372,7 +377,16 @@ body {
     border-radius: 6px;
     display: inline-flex;
     gap: 10px;
-} */
+}
+
+.formBuilderNav .p-tabview-nav{
+    padding: 5px;
+}
+
+.formBuilderNav .p-tabview-panels{
+    display: none;
+}
+*/
 
 
 /* tinyMCE */
@@ -395,8 +409,8 @@ body {
 }
 
 .figmaInputs{
-    width: 300px !important;
-    height: 48px !important;
+    width: 300px;
+    height: 48px;
     padding: 15px 12px 0px 12px;
     border-radius: 6px;
     border: 1px solid #D0D5DD;
