@@ -81,18 +81,20 @@ export default function MainPage() {
 
     return(
         <>
-        <div className='d-flex align-center justify-between' style={{height:'60px',background:'#FFFFFF',border:'1px solid #D0D5DD',padding:'12px'}}>
-            <div className='d-flex align-center'>
+        <div className='grid align-center p-2' style={{background:'#FFFFFF',border:'1px solid #D0D5DD',padding:'12px'}}>
+            <div className='col-12 md:col-6 flex align-items-center'>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke="#1D2939" strokeWidth="2"/>
                 </svg>
                 <p style={{margin:0}}>Register of a Crime - Create FIR</p>
             </div>
-            <div className='d-flex align-center' style={{gap:'12px'}}>
-                <button style={{padding:'8px',background:'#F9FAFB',border:'1px solid #D0D5DD',borderRadius:'6px',fontSize:'14px',fontWeight:'500'}}>Chose old drafts</button>
-                <hr style={{width:'16px',border:'1px solid #D0D5DD',rotate:'90deg'}} />
-                <button style={{padding:'8px',background:'#F9FAFB',border:'1px solid #D0D5DD',borderRadius:'6px',fontSize:'14px',fontWeight:'500'}}>Save as drafts</button>
-                <button style={{padding:'8px',background:'#32D583',border:'1px solid #D0D5DD',borderRadius:'6px',fontSize:'14px',fontWeight:'500'}}>Register FIR</button>
+            <div className='col-12 md:col-6'>
+                <div className='flex align-items-center justify-content-end' style={{gap:'12px'}}>              
+                    <button style={{padding:'8px',background:'#F9FAFB',border:'1px solid #D0D5DD',borderRadius:'6px',fontSize:'14px',fontWeight:'500'}}>Chose old drafts</button>
+                    <hr className='m-0' style={{width:'16px',border:'1px solid #D0D5DD',rotate:'90deg'}} />
+                    <button style={{padding:'8px',background:'#F9FAFB',border:'1px solid #D0D5DD',borderRadius:'6px',fontSize:'14px',fontWeight:'500'}}>Save as drafts</button>
+                    <button style={{padding:'8px',background:'#32D583',border:'1px solid #D0D5DD',borderRadius:'6px',fontSize:'14px',fontWeight:'500'}}>Register FIR</button>
+                </div>
             </div>
         </div>
         <div style={{position:'relative',height: '100vh'}}>
@@ -104,15 +106,15 @@ export default function MainPage() {
 
                         {/* navbar details */}
                         <div className='col-12'>
-                            <div className='grid m-0 p-3 w-full' style={{border:'1px solid #D0D5DD',borderRadius:'8px',background:'#FFFFFF'}}>
-                                <div className='grid col-7 pb-0' style={{gap:'24px'}}>
-                                    <div className='flex align-items-center' style={{gap:'12px'}}>
-                                        <span className='flex align-items-center justify-center' style={{width:'28px',height:'28px',background:'#1D2939',fontSize:'16px',fontWeight:'500',color:'#FFFFFF',borderRadius:'5px'}}>
+                            <div className='grid m-0 p-3 w-full pt-0' style={{border:'1px solid #D0D5DD',borderRadius:'8px',background:'#FFFFFF'}}>
+                                <div className='grid col-12 md:col-7 pb-0 mt-2' style={{gap:'24px'}}>
+                                    <div className='col-12 md:col-3 flex align-items-center' style={{gap:'12px'}}>
+                                        <span className='flex align-items-center justify-center' style={{minWidth:'28px',height:'28px',background:'#1D2939',fontSize:'16px',fontWeight:'500',color:'#FFFFFF',borderRadius:'5px'}}>
                                             1
                                         </span>
                                         <p style={{margin:'0',fontSize: '18px',fontWeight: '500',color:'#1D2939'}}>Basic details</p>
                                     </div>
-                                    <div className='flex align-items-center' style={{background:'#F9FAFB',border:'0.8px solid #D0D5DD',padding:'8px',borderRadius:'6px'}}>
+                                    <div className='col-12 md:col-7 flex align-items-center' style={{background:'#F9FAFB',border:'0.8px solid #D0D5DD',padding:'8px',borderRadius:'6px'}}>
                                         <div className='flex align-items-center' style={{gap:'4px'}}>
                                             <span className='flex align-items-center justify-center' style={{width:'12px',height:'12px',background:'#1570EF',fontSize:'8px',fontWeight:'500',color:'#FFFFFF',borderRadius:'50%'}}>
                                                 i
@@ -128,7 +130,7 @@ export default function MainPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='grid col-auto ml-auto align-items-center gap-2 p-2 pb-0'>
+                                <div className='grid col align-items-center justify-content-end gap-2 p-2 pb-0 mt-2'>
                                     <Button label="Back" severity="secondary" outlined icon="pi pi-arrow-left" style={{fontSize:'14px',padding:'8px'}} />
                                     <Button iconPos="right" label="Next" icon="pi pi-arrow-right" style={{fontSize:'14px',padding:'8px'}} />
                                 </div>
@@ -171,13 +173,13 @@ export default function MainPage() {
                                 </div>
                             </div>
                             <div className='grid gap-3 m-0 my-3'>
-                                <div className="col p-0">
+                                <div className="col-12 md:col p-0">
                                     <FloatLabel className='w-full'>
                                         <InputText keyfilter="alpha"  className='figmaInputs w-full' id="labelName" maxLength={10} />
                                         <label className="figmaInputsLabel" htmlFor="labelName">Enter label name<span className='anekFont'></span></label>
                                     </FloatLabel>
                                 </div>
-                                <div className="col-3 p-0">
+                                <div className="col-7 md:col-3 p-0">
                                     <FloatLabel>
                                         <Dropdown
                                             value={selectedCountry}
@@ -191,7 +193,7 @@ export default function MainPage() {
                                         <label className="figmaInputsLabel" htmlFor="username">Select label type<span className='anekFont'></span></label>
                                     </FloatLabel>
                                 </div>
-                                <div className="col-1 p-0">
+                                <div className="col-4 md:col-1 p-0">
                                     <TabView className='formBuilderNav' activeIndex={0}>
                                         <TabPanel header="1" className='formBuilderNavTabs' style={{width:'40px',height:'40px'}}>
                                         </TabPanel>
@@ -201,7 +203,7 @@ export default function MainPage() {
                                 </div>
                             </div>
                             <div className='grid m-0'>
-                                <div className="col grid flex-column gap-3">
+                                <div className="col-12 md:col grid flex-column gap-3 mt-2">
                                     <div className="card flex justify-content-start align-items-center gap-1">
                                         <InputSwitch checked={checked1} onChange={(e) => setChecked1(e.value)} />
                                         <p className='m-0 font-normal' style={{fontSize:'16px',color:'#1D2939'}}>Tool tip required</p>
@@ -215,8 +217,8 @@ export default function MainPage() {
                                         <p className='m-0 font-normal' style={{fontSize:'16px',color:'#1D2939'}}>Field value required</p>
                                     </div>
                                 </div>
-                                <div className="col-4">
-                                    <div className='flex align-items-center gap-3'>
+                                <div className="col-12 md:col-4 p-0 mt-2">
+                                    <div className='flex flex-column md:flex-row md:align-items-center gap-3'>
                                         <div className="card flex justify-content-start align-items-center gap-1">
                                             <InputSwitch checked={checked4} onChange={(e) => setChecked4(e.value)} />
                                             <p className='m-0 font-normal' style={{fontSize:'16px',color:'#1D2939'}}>Mandatory field</p>

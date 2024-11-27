@@ -845,7 +845,12 @@ body {
     margin-left: 253px;
     overflow: auto;
 }
-
+@media (max-width: 750px) {
+    .mainPanelDiv{
+        margin-left: 0;
+        overflow: auto;
+    }
+}
 .sidebarList{
     background-color: #FFFFFF;
     display: flex;

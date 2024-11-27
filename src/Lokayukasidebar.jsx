@@ -9,10 +9,42 @@ export default function Sidebar() {
     
         e.currentTarget.classList.add('activeLokayuktaSidebar');
     }
+    
+    var toggleSidebar = () => {        
+        var sidebar = document.querySelector('#mainSidebar');
+        if(sidebar) {
+            sidebar.classList.toggle('hidden');
+        }
+    };
+
+    document.addEventListener('click', (event) => {
+        var toggleBtn = document.querySelector('#toggleSidebarBtn');
+        var sidebar = document.querySelector('#mainSidebar');
+    
+        if (!toggleBtn || !sidebar) return;
+            
+        var isToggleVisible = toggleBtn.offsetParent !== null;
+            
+        if (isToggleVisible) {
+            var isClickInsideSidebar = sidebar.contains(event.target);
+            var isClickOnToggleBtn = toggleBtn.contains(event.target);
+            
+            if (!isClickInsideSidebar && !isClickOnToggleBtn) {
+                sidebar.classList.add('hidden');
+            }
+        }
+    });
+    
 
     return(
-        <div className='lokayuktaSidebarLayout'>
-            <div style={{display:'flex',alignItems:'center',gap:'10px',height:'70px',borderBottom:'1px solid #D0D5DD',paddingLeft:'18px'}}>
+        <>
+        <div id='toggleSidebarBtn' className='block md:hidden'>
+            <svg onClick={toggleSidebar} style={{margin:'10px 20px'}} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 12H21M3 6H21M3 18H21" stroke="#101828" strokeWidth="2"/>
+            </svg>
+        </div>
+        <div id="mainSidebar" className='lokayuktaSidebarLayout shadow-1 hidden md:block'>
+            <div className='flex align-items-center' style={{gap:'10px',height:'70px',borderBottom:'1px solid #D0D5DD',paddingLeft:'18px'}}>
                 <img src="./lokayuktaLogo.svg" alt="" />
                 <p className='logoName'>
                     Karnataka <br />
@@ -20,7 +52,7 @@ export default function Sidebar() {
                 </p>
             </div>
             <div>
-                <ul style={{listStyle:'none',padding:'0',display:'flex',flexDirection:'column',gap:'4px'}}>
+                <ul className='flex flex-column p-0 list-none' style={{gap:'4px'}}>
 
                     <li className='lokayuktaSidebarMenuList activeLokayuktaSidebar' onClick={activeSidebarChange}>
                         <svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,9 +77,9 @@ export default function Sidebar() {
                     
                 </ul>
 
-                <hr style={{width:'100%',border:'1px solid #EAECF0'}} />
+                <hr className='w-full' style={{border:'1px solid #EAECF0'}} />
 
-                <ul style={{listStyle:'none',padding:'0',display:'flex',flexDirection:'column',gap:'4px'}}>
+                <ul className='flex flex-column p-0 list-none' style={{gap:'4px'}}>
 
                     <li className='lokayuktaSidebarMenuList' onClick={activeSidebarChange}>
                         <svg className='fillSvg' width="20" height="20" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,11 +104,11 @@ export default function Sidebar() {
 
                 </ul>
 
-                <hr style={{width:'100%',border:'1px solid #EAECF0'}} />
+                <hr className='w-full' style={{border:'1px solid #EAECF0'}} />
 
-                <div style={{padding:'6px 16px',display:'flex',alignItems:'center',gap:'8px'}}>
+                <div className='flex align-items-center' style={{padding:'6px 16px',gap:'8px'}}>
                     <img src="./user.svg" className='lokaUserLogo' alt="" />
-                    <div style={{display:'flex',flexDirection:'column',gap:'5px'}}>
+                    <div className='flex flex-column' style={{gap:'5px'}}>
                         <label className='lokaUserName'>Manjunath Dixit SV</label>
                         <label className='lokaUserDesignation'>ASP</label>
                     </div>
@@ -85,5 +117,6 @@ export default function Sidebar() {
 
             </div>
         </div>
+        </>
     )
 }
